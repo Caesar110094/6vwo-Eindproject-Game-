@@ -89,7 +89,13 @@ var level4 = [
 
 ]
 
+var level5 = [
+
+]
+
 var levels = [level1, level2, level3, level4];
+
+var mode;
 
 function preload() {
 
@@ -102,7 +108,8 @@ function preload() {
 
 function setup() {
   createCanvas(800, 600);
-
+  mode = 0;
+  textSize(21);
 
   map1 = new Map(levels)
   player = new Player()
@@ -113,10 +120,23 @@ function setup() {
 }
 
 function draw() {
-  background(210, 255, 200);
-  map1.draw()
-  player.draw()
-  player.update()
+ clear();
+  if (mode==0) {
+    text('Press Escape to start',20,40);
+  }
+  if (mode==1) {
+   background(	255, 255, 255);
+   map1.draw()
+   player.draw()
+   player.update()
+
+  }
+  
+  if (keyIsPressed) {
+    if (keyCode == ESCAPE) {
+    mode=1;}
+  }
+
 
 
 

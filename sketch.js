@@ -137,8 +137,4 @@ function draw() {
     mode=1;}
   }
 
-
-
-
-
 }

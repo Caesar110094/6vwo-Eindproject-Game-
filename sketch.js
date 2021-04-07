@@ -103,7 +103,6 @@ function preload() {
   player_injured_image = loadImage("images/player.png")
   tiles_image = loadImage("images/tiles.png")
 
-
 }
 
 function setup() {

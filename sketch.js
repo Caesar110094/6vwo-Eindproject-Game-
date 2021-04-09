@@ -18,7 +18,7 @@ var level2 = [
 ]
 
 var level1 = [
-  [1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+  [1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
   [2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2],
   [2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 5, 2],
   [2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 0, 1, 2],
@@ -98,11 +98,9 @@ var levels = [level1, level2, level3, level4];
 var mode;
 
 function preload() {
-
   player_image = loadImage("images/player.png")
   player_injured_image = loadImage("images/player.png")
   tiles_image = loadImage("images/tiles.png")
-
 }
 
 function setup() {
@@ -121,7 +119,7 @@ function setup() {
 function draw() {
  clear();
   if (mode==0) {
-    text('Press Escape to start',20,40);
+    text('Press Escape to start',20,40); 
   }
   if (mode==1) {
    background(	255, 255, 255);

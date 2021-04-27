@@ -119,7 +119,14 @@ function setup() {
 function draw() {
  clear();
   if (mode==0) {
-    text('Press Escape to start',20,40); 
+    background(255,0,0)
+    textSize(65)
+    text('Welcome to Contra',150,75);
+    textSize(45)
+    text("press escape to start", 200, 125)
+    if (keyIsPressed) {
+     if (keyCode == ESCAPE) {
+      mode=1;}
   }
   if (mode==1) {
    background(	255, 255, 255);
@@ -129,9 +136,5 @@ function draw() {
 
   }
   
-  if (keyIsPressed) {
-    if (keyCode == ESCAPE) {
-    mode=1;}
-  }
-
+  
 }

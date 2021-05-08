@@ -119,6 +119,7 @@ function setup() {
 function draw() {
  clear();
   if (mode==0) {
+    
     background(255,0,0)
     textSize(65)
     text('Welcome to Contra',150,75);
@@ -126,15 +127,35 @@ function draw() {
     text("press escape to start", 200, 125)
     if (keyIsPressed) {
      if (keyCode == ESCAPE) {
+       this.lives = 2;
       mode=1;}
   }
+  }
   if (mode==1) {
+    print(mode)
    background(	255, 255, 255);
    map1.draw()
    player.draw()
    player.update()
+   print(mode)
+   if (this.isAlive == false){
+     mode = 2;
+     
+   } 
 
   }
-  
-  
+  if (mode ==2){
+    print(mode)
+    background(0,0,255)
+    
+    textSize(65)
+    text('You died', 150, 75)
+    textSize(45)
+    text("Press tab to retry", 200, 125)
+    if (keyIsPressed) {
+     if (keyCode == TAB) {
+       mode= 0;
+       }
+   }
+  }
 }

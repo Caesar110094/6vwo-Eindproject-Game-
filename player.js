@@ -44,10 +44,12 @@ class Player {
       this.animationTimer++;
       if (this.animationTimer > 120) this.animationTimer = 0;
     } else {
-      //die and stuff...
+      //die and stuff.
+      mode = 2; 
       textSize(44);
       fill("white");
       text(this.endingMessage, 200, 200);
+      this.lives = 2;
       // this.playSound(loseSound);
     }
   }

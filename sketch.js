@@ -119,7 +119,6 @@ function setup() {
 function draw() {
  clear();
   if (mode==0) {
-    
     background(255,0,0)
     textSize(65)
     text('Welcome to Contra',150,75);
@@ -127,9 +126,9 @@ function draw() {
     text("press escape to start", 200, 125)
     if (keyIsPressed) {
      if (keyCode == ESCAPE) {
-       this.lives = 2;
-      mode=1;}
-  }
+      mode=1;
+      }
+   }
   }
   if (mode==1) {
     print(mode)
